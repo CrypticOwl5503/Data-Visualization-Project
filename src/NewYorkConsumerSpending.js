@@ -22,6 +22,12 @@ const ConsumerSpendingChart = () => {
   return (
     <div style={{ padding: '20px' }}>
       <h2>2023 Consumer Spending (Millions USD)</h2>
+      <p style={{ fontSize: '14px', color: '#555', marginBottom: '16px' }}>
+        This chart shows the breakdown of consumer expenditures in New York for the year 2023,
+        across various categories including goods, services, healthcare, housing, and more.
+        Spending is represented in millions of USD, and highlights how services dominate
+        total consumer consumption.
+      </p>
       <BarChart
         width={500}
         height={600}
@@ -49,6 +55,11 @@ const ConsumerSpendingChart = () => {
           name="Spending Amount"
         />
       </BarChart>
+      <p className="text-xs text-gray-500 mt-2">
+        Source: <a href="https://www.bls.gov/regions/northeast/news-release/consumerexpenditures_newyork.htm" target="_blank" rel="noopener noreferrer" className="underline">
+          U.S. Bureau of Labor Statistics
+        </a>
+      </p>
     </div>
   );
 };

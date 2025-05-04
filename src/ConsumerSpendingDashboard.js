@@ -26,7 +26,11 @@ const Dashboard = () => {
           <PerCapitaConsumptionChart />
         </div>
       </div>
+      <p className="text-xs text-gray-500 mt-2">
+        Source: https://www.bls.gov/regions/northeast/news-release/consumerexpenditures_newyork.htm
+      </p>
     </div>
+    
   );
 };
 

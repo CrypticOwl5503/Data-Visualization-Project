@@ -194,7 +194,6 @@ const CrimeHousingScatterPlot = () => {
             />
           )}
           
-          {/* Labels for each borough */}
           {data.map((entry) => (
             <React.Fragment key={entry.Geography}>
               {(viewMode === 'both' || viewMode === 'property') && (
@@ -234,7 +233,10 @@ const CrimeHousingScatterPlot = () => {
       </ResponsiveContainer>
       
       <div style={{ textAlign: 'center', fontSize: '14px', color: '#666', marginTop: '20px' }}>
-        Data source: NYC Open Data, 2023
+        Crime and housing data reflects 2023 statistics across NYC boroughs and districts. <br />
+        Source: <a href="https://furmancenter.org/neighborhoods" target="_blank" rel="noopener noreferrer" style={{ color: '#1E88E5', textDecoration: 'none' }}>
+          Furman Center - NYC Neighborhood Data Profiles
+        </a>
       </div>
     </div>
   );

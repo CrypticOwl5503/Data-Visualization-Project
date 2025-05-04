@@ -39,6 +39,10 @@ export default function IncomeRaceLineChart() {
         <span style={{ display: 'inline-block', width: 12, height: 12, backgroundColor: '#1f77b4', marginRight: 5, border: '1px dashed #ff9800' }}></span>
         <span>Predicted Data (after 2023)</span>
       </div>
+
+      <p style={{ fontSize: '14px', color: '#555', marginBottom: '16px' }}>
+        This chart visualizes the projected trends in median household income by race in NYC from 2010 to 2030, with historical data from 2010-2023 and predicted data from 2024 onwards. It uses different colors for each racial category and differentiates predicted data with dashed lines.
+      </p>
       
       <ResponsiveContainer width="100%" height={350}>
         <LineChart data={data} margin={{ top: 20, right: 40, left: 20, bottom: 20 }}>
@@ -72,19 +76,17 @@ export default function IncomeRaceLineChart() {
           <Line type="monotone" dataKey="Asian" name="Asian" stroke="#17becf" dot={false} strokeDasharray={(d) => d.predicted ? "5 5" : "0"} />
           <Line type="monotone" dataKey="Hawaiian" name="Hawaiian" stroke="#ff7f0e" dot={false} strokeDasharray={(d) => d.predicted ? "5 5" : "0"} />
           <Line type="monotone" dataKey="Other" name="Other" stroke="#8c564b" dot={false} strokeDasharray={(d) => d.predicted ? "5 5" : "0"} />
-          <Line type="monotone" dataKey="Multi" name="Multi" stroke="#2ca02c" dot={false} strokeDasharray={(d) => d.predicted ? "5 5" : "0"} />
+          <Line type="monotone" dataKey="Multi" name="Multi" stroke="#9467bd" dot={false} strokeDasharray={(d) => d.predicted ? "5 5" : "0"} />
         </LineChart>
       </ResponsiveContainer>
-      
-      <div style={{ marginTop: 10, color: '#ff9800', fontStyle: 'italic', textAlign: 'right' }}>
-        * Data after 2023 is predicted
+
+      <div style={{ fontSize: '14px', color: '#555', marginTop: '20px' }}>
+        <p><strong>Source:</strong> New York, NY - Insights, Neilsberg. 
+          <a href="https://www.neilsberg.com/insights/topic/new-york-ny/" target="_blank" style={{ color: '#1e90ff' }}>
+            https://www.neilsberg.com/insights/topic/new-york-ny/
+          </a>
+        </p>
       </div>
-      
-      {currentYear >= 2024 && (
-        <div style={{ marginTop: 5, fontWeight: 'bold', textAlign: 'center' }}>
-          Current Year: {currentYear} (Using predicted data)
-        </div>
-      )}
     </div>
   );
 }

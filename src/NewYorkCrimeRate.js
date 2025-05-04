@@ -60,7 +60,7 @@ const ToggleButton = styled.button`
 `;
 
 const colorScale = scaleQuantize()
-  .domain([0, 20]) // Adjust to fit your data
+  .domain([0, 20]) // Adjust as per your data
   .range([
     "#fff7fb",
     "#ece7f2",
@@ -124,6 +124,11 @@ const CrimeRateMap = () => {
   return (
     <MapContainer>
       <h2>NYC Crime Rates by Neighborhood (2023)</h2>
+      <p style={{ maxWidth: 800 }}>
+        This map shows the spatial distribution of property and violent crime rates across New York City neighborhoods in 2023.
+        You can toggle between crime types to explore different aspects of public safety.
+      </p>
+
       <div style={{ margin: '20px 0' }}>
         <ToggleButton
           onClick={() => setCrimeType('property_crime_rate')}
@@ -139,7 +144,7 @@ const CrimeRateMap = () => {
         </ToggleButton>
       </div>
 
-      <div style={{ position: 'relative', height: '600px' }}>
+      <div style={{ position: 'relative', height: '900px' }}>
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
@@ -192,6 +197,12 @@ const CrimeRateMap = () => {
           })}
         </Legend>
       </div>
+
+      <p style={{ marginTop: '20px', fontSize: '14px', color: '#666' }}>
+        Source: <a href="https://furmancenter.org/neighborhoods" target="_blank" rel="noopener noreferrer">
+          Furman Center NYC Neighborhoods
+        </a>
+      </p>
     </MapContainer>
   );
 };

@@ -75,12 +75,19 @@ const TransportDensityMap = () => {
         New York City Taxi Activity Density
       </h1>
 
+      <p style={{ textAlign: 'center', color: '#666', marginBottom: '20px' }}>
+      Visualizing New York City taxi activity density, with markers representing pickup/dropoff counts.
+
+      </p>
+
       <div style={{ 
         display: 'flex', 
         flex: 1,
         gap: '20px',
         height: 'calc(100vh - 150px)'
       }}>
+
+        
         <div style={{ flexGrow: 1, height: '100%', minWidth: 0 }}>
           <ComposableMap
             projection="geoMercator"
@@ -195,6 +202,13 @@ const TransportDensityMap = () => {
           dangerouslySetInnerHTML={{ __html: tooltip.content }}
         />
       )}
+
+<div style={{ textAlign: 'center', marginTop: '20px', fontSize: '14px', color: '#555' }}>
+  Data source: <a href="https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page" target="_blank" rel="noopener noreferrer" style={{ color: '#1e90ff' }}>
+    NYC TLC Trip Record Data
+  </a>
+</div>
+
     </div>
   );
 };

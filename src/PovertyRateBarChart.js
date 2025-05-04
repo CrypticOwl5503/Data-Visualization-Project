@@ -46,6 +46,9 @@ const PovertyRateBarChart = () => {
   return (
     <div style={{ width: '100%', maxWidth: 1200, margin: '10 auto', padding: 24 }}>
       <h2>NYC Poverty Rates by Geography (2022)</h2>
+      <p style={{ fontSize: '14px', color: '#555', marginBottom: '16px' }}>
+      Displays the poverty rates by geography in NYC for 2022. Hover on any bar to view detailed information about the selected area's poverty rate.
+      </p>
       <ResponsiveContainer width="100%" height={600}>
         <BarChart
           data={data}
@@ -110,6 +113,11 @@ const PovertyRateBarChart = () => {
           </div>
         )}
       </div>
+
+      <div style={{ marginTop: 16, fontSize: '12px', color: '#888', textAlign: 'right' }}>
+  Source: <a href="https://www.nyc.gov/site/opportunity/poverty-in-nyc/poverty-data.page" target="_blank" rel="noopener noreferrer">NYC Poverty Data</a>
+</div>
+
     </div>
   );
 };

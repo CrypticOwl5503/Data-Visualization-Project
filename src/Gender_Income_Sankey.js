@@ -34,8 +34,12 @@ const GenderIncomeSankey = () => {
   };
 
   return (
-    <div style={{ height: 500, width: '100%' }}>
+    <div style={{ height: 800, width: '100%' }}>
       <h2>NYC Income Distribution by Gender</h2>
+      <p style={{ fontSize: '14px', color: '#555', marginBottom: '16px' }}>
+        This Sankey diagram visualizes the distribution of income by gender in New York City, showing how income is spread across different brackets for males and females. The thickness of the links represents the number of people in each income category, and the color of the nodes distinguishes between genders and income brackets. Data from 2023.
+      </p>
+      
       <ResponsiveSankey
         data={data}
         margin={{ top: 40, right: 160, bottom: 40, left: 50 }}
@@ -73,7 +77,19 @@ const GenderIncomeSankey = () => {
           }
           return null;
         }}
+            // Adjust the height and width here to make the plot smaller
+    height={600}  // Change this to a smaller value
+    width={1100}   // Change this to a smaller value
       />
+      
+      
+      <div style={{ fontSize: '14px', color: '#555', marginTop: '-180px' }}>
+        <p><strong>Source:</strong> New York, NY - Insights, Neilsberg. 
+          <a href="https://www.neilsberg.com/insights/topic/new-york-ny/" target="_blank" style={{ color: '#1e90ff' }}>
+            https://www.neilsberg.com/insights/topic/new-york-ny/
+          </a>
+        </p>
+      </div>
     </div>
   );
 };

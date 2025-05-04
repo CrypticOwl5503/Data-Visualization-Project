@@ -23,8 +23,17 @@ const Header = styled.div`
 
 const SliderContainer = styled.div`
   width: 80%;
-  margin: 20px auto;
+  margin: 20px auto 50px; /* Increased bottom margin to accommodate rotated labels */
   padding: 0 20px;
+  position: relative;
+  
+  /* Custom styling for rotated year labels */
+  .ant-slider-mark-text {
+    transform: rotate(-45deg);
+    transform-origin: center top;
+    margin-top: 12px;
+    white-space: nowrap;
+  }
 `;
 
 const InfoPanel = styled.div`
@@ -105,7 +114,7 @@ const HousingPriceMap = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await csv('/data/housing_forecast.csv');
+      const data = await csv('/data/housing_forecast_imputed.csv');
       const processed = data.map(d => {
         const obj = {
           base_year: d.base_year,
@@ -176,6 +185,10 @@ const HousingPriceMap = () => {
         </h2>
         <p>Base Year: 1975 (Index = 100)</p>
       </Header>
+
+      <p style={{ textAlign: 'center', color: '#666', marginBottom: '20px' }}>
+      This map shows changes in the Housing Price Index across NYC neighborhoods, based on a base value of 100 in 1975. Use the slider to explore how prices evolved over time. Forecasted values beyond 2024 are marked as predictions.
+      </p>
       
       <SliderContainer>
         {years.length > 0 && (
@@ -188,7 +201,11 @@ const HousingPriceMap = () => {
               acc[y] = {
                 style: {
                   color: y > 2024 ? '#ff9800' : undefined,
-                  fontWeight: y > 2024 ? 'bold' : undefined
+                  fontWeight: y > 2024 ? 'bold' : undefined,
+                  transform: 'rotate(-45deg)', // Rotate by 45 degrees
+                  transformOrigin: 'center top',
+                  marginTop: '20px', // Add space for rotated text
+                  display: 'inline-block'
                 },
                 label: y > 2024 ? `${y}*` : y.toString()
               };
@@ -208,7 +225,7 @@ const HousingPriceMap = () => {
           />
         )}
         {years.some(y => y > 2024) && (
-          <div style={{ textAlign: 'right', marginTop: 5, color: '#ff9800', fontStyle: 'italic' }}>
+          <div style={{ textAlign: 'right', marginTop: 24, color: '#ff9800', fontStyle: 'italic' }}>
             * Predicted data
           </div>
         )}
@@ -298,6 +315,12 @@ const HousingPriceMap = () => {
               * Values after 2024 are predicted
             </div>
           )}
+
+          <p style={{ marginTop: '20px', fontSize: '14px', color: '#666' }}>
+            Source: <a href="https://furmancenter.org/neighborhoods" target="_blank" rel="noopener noreferrer">
+              Furman Center NYC Neighborhoods
+            </a>
+          </p>
         </Legend>
       </div>
     </MapContainer>

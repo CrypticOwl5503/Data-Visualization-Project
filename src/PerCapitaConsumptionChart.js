@@ -50,6 +50,10 @@ const PerCapitaConsumptionChart = () => {
         <span style={{ display: 'inline-block', width: 12, height: 12, backgroundColor: '#8884d8', marginRight: 5, border: '1px dashed #ff9800' }}></span>
         <span>Predicted Data</span>
       </div>
+
+      <p style={{ fontSize: '14px', color: '#555', marginBottom: '16px' }}>
+      Displays the historical and predicted per capita consumption of NYC over time. Data after 2023 represents predictions based on current trends.
+      </p>
       
       <ResponsiveContainer width="100%" height={400}>
         <LineChart
@@ -99,6 +103,12 @@ const PerCapitaConsumptionChart = () => {
       <div style={{ marginTop: 10, color: '#ff9800', fontStyle: 'italic', textAlign: 'right' }}>
         * Data after 2023 is predicted
       </div>
+
+      <p className="text-xs text-gray-500 mt-2">
+        Source: <a href="https://www.bls.gov/regions/northeast/news-release/consumerexpenditures_newyork.htm" target="_blank" rel="noopener noreferrer" className="underline">
+          U.S. Bureau of Labor Statistics
+        </a>
+      </p>
     </div>
   );
 };

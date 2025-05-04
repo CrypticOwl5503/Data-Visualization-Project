@@ -139,6 +139,12 @@ const NewYorkPopulationMap = () => {
         </select>
       </div>
 
+      <p style={{ textAlign: 'center', color: '#666', marginBottom: '20px' }}>
+      A choropleth map of New York City displaying the population distribution by census tract.
+Hover over regions to view detailed demographic data for total population, men, and women.
+
+      </p>
+
       <div style={{ 
         display: 'flex', 
         flex: 1,
@@ -288,6 +294,17 @@ const NewYorkPopulationMap = () => {
             dangerouslySetInnerHTML={{ __html: tooltip.content }}
         />
         )}
+                      <div style={{ textAlign: 'center', fontSize: '14px', color: '#666', marginTop: '20px' }}>
+        <br />
+        Source: <a href="https://opendata.cityofnewyork.us/" target="_blank" rel="noopener noreferrer" style={{ color: '#1E88E5', textDecoration: 'none' }}>
+          NYC Open Data
+        </a>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <br />
 
     </div>
   );

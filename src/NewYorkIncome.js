@@ -138,6 +138,10 @@ const NewYorkPopulationMap = () => {
         </select>
       </div>
 
+      <p style={{ textAlign: 'center', color: '#666', marginBottom: '20px' }}>
+      This map shows average Incomes for the year 2024.
+      </p>
+
       <div style={{ 
         display: 'flex', 
         flex: 1,
@@ -287,8 +291,14 @@ const NewYorkPopulationMap = () => {
             dangerouslySetInnerHTML={{ __html: tooltip.content }}
         />
         )}
+              <div style={{ textAlign: 'center', fontSize: '14px', color: '#666', marginTop: '20px' }}> <br />
+        Source: <a href="https://opendata.cityofnewyork.us/" target="_blank" rel="noopener noreferrer" style={{ color: '#1E88E5', textDecoration: 'none' }}>
+          NYC Open Data
+        </a>
+      </div>
 
     </div>
+    
   );
 };
 
