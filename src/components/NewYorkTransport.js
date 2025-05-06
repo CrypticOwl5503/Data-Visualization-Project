@@ -76,7 +76,7 @@ const TransportDensityMap = () => {
       </h1>
 
       <p style={{ textAlign: 'center', color: '#666', marginBottom: '20px' }}>
-      Visualizing New York City taxi activity density, with markers representing pickup/dropoff counts.
+      Visualizing New York City taxi activity density, with markers representing pickup/dropoff counts. Data from 2023.
 
       </p>
 

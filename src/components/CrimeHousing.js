@@ -75,7 +75,7 @@ const CrimeHousingScatterPlot = () => {
         NYC Crime Rate vs Housing Price (2023)
       </h2>
       <p style={{ textAlign: 'center', color: '#666', marginBottom: '20px' }}>
-        Explore the relationship between crime rates and housing prices across NYC boroughs
+        Explore the relationship between crime rates and housing prices across NYC boroughs. 
       </p>
       
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>

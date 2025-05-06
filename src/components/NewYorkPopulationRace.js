@@ -13,9 +13,13 @@ const NewYorkPopulationMap = () => {
 
   const demographicOptions = [
     { value: 'TotalPop', label: 'Total Population' },
-    { value: 'Men', label: 'Men' },
-    { value: 'Women', label: 'Women' }
+    { value: 'Hispanic', label: 'Hispanic (%)' },
+    { value: 'White', label: 'White (%)' },
+    { value: 'Black', label: 'Black (%)' },
+    { value: 'Native', label: 'Native (%)' },
+    { value: 'Asian', label: 'Asian (%)' },
   ];
+  
 
   const nycCenter = [-74.0060, 40.7128];
   const geoUrl = "/data/NYC_map_json.json";
@@ -141,7 +145,7 @@ const NewYorkPopulationMap = () => {
 
       <p style={{ textAlign: 'center', color: '#666', marginBottom: '20px' }}>
       A choropleth map of New York City displaying the population distribution by census tract.
-Hover over regions to view detailed demographic data for total population, men, and women.
+Hover over regions to view detailed demographic data for total population, and different races. Data from 2024.
 
       </p>
 
@@ -294,17 +298,14 @@ Hover over regions to view detailed demographic data for total population, men, 
             dangerouslySetInnerHTML={{ __html: tooltip.content }}
         />
         )}
-                      <div style={{ textAlign: 'center', fontSize: '14px', color: '#666', marginTop: '20px' }}>
-        <br />
+
+<div style={{ textAlign: 'center', fontSize: '14px', color: '#666', marginTop: '20px' }}> <br />
         Source: <a href="https://opendata.cityofnewyork.us/" target="_blank" rel="noopener noreferrer" style={{ color: '#1E88E5', textDecoration: 'none' }}>
           NYC Open Data
         </a>
       </div>
 
-      <br />
-      <br />
-      <br />
-      <br />
+      <br/>
 
     </div>
   );

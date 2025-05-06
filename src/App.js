@@ -11,19 +11,19 @@ import {
 } from '@ant-design/icons';
 
 // Import all your components
-import NewYorkPopulationGender from './NewYorkPopulationGender';
-import NewYorkPopulationRace from './NewYorkPopulationRace';
-import NewYorkIncome from './NewYorkIncome';
-import NewYorkTransport from './NewYorkTransport';
-import NewYorkHousing from './NewYorkHousing';
-import PovertyRateBarChart from './PovertyRateBarChart';
-import CrimeRateMap from './NewYorkCrimeRate';
-import NYCIndicatorsDashboard from './NYCIndicatorsDashboard';
-import GenderIncomeSankey from './Gender_Income_Sankey';
-import IncomeRaceLineChart from './Race_Income';
-import CrimeHousingScatterPlot from './CrimeHousing';
-import ConsumerSpendingChart from "./NewYorkConsumerSpending"; 
-import PerCapitaConsumptionChart from "./PerCapitaConsumptionChart"; 
+import NewYorkPopulationGender from './components/NewYorkPopulationGender';
+import NewYorkPopulationRace from './components/NewYorkPopulationRace';
+import NewYorkIncome from './components/NewYorkIncome';
+import NewYorkTransport from './components/NewYorkTransport';
+import NewYorkHousing from './components/NewYorkHousing';
+import PovertyRateBarChart from './components/PovertyRateBarChart';
+import CrimeRateMap from './components/NewYorkCrimeRate';
+import NYCIndicatorsDashboard from './components/NYCIndicatorsDashboard';
+import GenderIncomeSankey from './components/Gender_Income_Sankey';
+import IncomeRaceLineChart from './components/Race_Income';
+import CrimeHousingScatterPlot from './components/CrimeHousing';
+import ConsumerSpendingChart from "./components/NewYorkConsumerSpending"; 
+import PerCapitaConsumptionChart from "./components/PerCapitaConsumptionChart"; 
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;

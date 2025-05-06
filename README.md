@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# NYC Socioeconomic Data Visualization Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an interactive data visualization dashboard presenting key socioeconomic, demographic, housing, mobility, and crime-related insights for **New York City**. Built with **React**, **Recharts**, **Mapbox/Leaflet**, and **Tailwind CSS**, the dashboard provides policymakers, researchers, and citizens with a powerful tool to explore data trends across time and geography.
 
-## Available Scripts
+##  Overview
 
-In the project directory, you can run:
+This dashboard compiles and visualizes multiple datasets from public NYC sources, covering areas such as:
 
-### `npm start`
+- Population by gender and race
+- Income distribution
+- Housing market trends
+- Crime rate patterns
+- Consumer spending
+- Taxi mobility activity
+- Poverty levels
+- Consumption behavior
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Each visualization has a dedicated module, accessible via a central dashboard.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Visualizations
 
-### `npm test`
+| Visualization | Type | Description |
+|---------------|------|-------------|
+| 🗺️ **NYC Choropleth Map of Population by Gender** | Choropleth Map | Visualizes the gender distribution across NYC boroughs and neighborhoods. |
+| 🗺️ **NYC Choropleth Map of Population by Race** | Choropleth Map | Shows racial demographics by geography. |
+| 🗺️ **NYC Choropleth Map of Income** | Choropleth Map | Represents median household income distribution. |
+| 🗺️ **NYC Bubble Map by Taxi Activity Density** | Bubble Map | Highlights high-density pickup/drop-off taxi zones. |
+| 📉 **Consumer Spending Bar Graph** | Bar Chart | Shows average and total consumer spending patterns across categories. |
+| 📈 **Per Capita Consumption Over Time** | Line Chart | Visual trend of per capita consumption for NYC residents. |
+| 🗺️ **Housing Prices Over Time Choropleth Map** | Choropleth Time Map | Tracks housing price evolution geographically. |
+| 📊 **Poverty Rates by Geography** | Bar Graph | Compares poverty rates across NYC boroughs. |
+| 🗺️ **Crime Rate by Neighborhood** | Choropleth Map | Maps crime rates across local precincts or neighborhoods. |
+| 📊 **NYC Key Indicators Dashboard** | Dashboard View | Aggregated view of key metrics (Income, Crime, Housing, Poverty). |
+| 🪢 **Income Distribution by Gender Sankey Map** | Sankey Diagram | Shows how income brackets are distributed across genders. |
+| 📈 **Median Household Income by Race Over Time** | Line Graph | Illustrates income inequality over years by race. |
+| ⚖️ **Crime Rate vs Housing Price** | Scatter Plot | Reveals correlations or patterns between safety and housing market. |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🖼️ Screenshots
 
-### `npm run build`
+You can insert preview images of your visualizations here:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Population by Race
+![Population by Race](./images/pop_race_map.png)
+## Income Distribution by Gender
+![Gender vs Income](./images/gender_income.png)
+## Taxi Activity
+![Taxi Activity](./images/taxi_Activity.png)
+## Crime vs Housing Price
+![Crime vs Housing Price](./images/crime_vs_housing.png)
