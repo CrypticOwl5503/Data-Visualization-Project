@@ -44,6 +44,6 @@ You can insert preview images of your visualizations here:
 ## Income Distribution by Gender
 ![Gender vs Income](./images/gender_income.png)
 ## Taxi Activity
-![Taxi Activity](./images/taxi_Activity.png)
+![Taxi Activity](./images/taxi_activity.png)
 ## Crime vs Housing Price
 ![Crime vs Housing Price](./images/crime_vs_housing.png)
