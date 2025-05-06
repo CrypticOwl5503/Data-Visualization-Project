@@ -35,9 +35,7 @@ Each visualization has a dedicated module, accessible via a central dashboard.
 | 📈 **Median Household Income by Race Over Time** | Line Graph | Illustrates income inequality over years by race. |
 | ⚖️ **Crime Rate vs Housing Price** | Scatter Plot | Reveals correlations or patterns between safety and housing market. |
 
-## 🖼️ Screenshots
-
-You can insert preview images of your visualizations here:
+## Screenshots
 
 ## Population by Race
 ![Population by Race](./images/pop_race_map.png)
